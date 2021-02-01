@@ -5,8 +5,8 @@
  * @list: is list to sort
  * Return: Nothing
  */
- void insertion_sort_list(listint_t **list)
- {
+void insertion_sort_list(listint_t **list)
+{
 	listint_t *b = NULL;
 	listint_t *a = NULL;
 	listint_t *temp = NULL;
@@ -44,9 +44,8 @@
 			print_list(*list);	
 		}
 		for (j = 0; j < i; j++)
-			if (b != NULL)
-				b = b->next;
+		if (b != NULL)
+		b = b->next;
 	}
 
- }
- 
+}
