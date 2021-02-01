@@ -5,15 +5,14 @@
  * @size: size of list
  * Return: Nothing
  */
- void bubble_sort(int *array, size_t size)
- {
-	int i = 0;
+void bubble_sort(int *array, size_t size)
+{
+	size_t i = 0;
 	int j = 1;
 	int tmp;
 
-	if (array == NULL)
+	if (array == NULL || size < 2)
 		return;
-
 	while (j)
 	{
 		j = 0;
@@ -29,4 +28,4 @@
 			}
 		}	
 	}
- }
+}
