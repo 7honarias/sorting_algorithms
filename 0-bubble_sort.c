@@ -1,7 +1,9 @@
 #include "sort.h"
 /**
- *
- *
+ * bubble_sort - sort list asending
+ * @array: array for sort
+ * @size: size of list
+ * Return: Nothing
  */
  void bubble_sort(int *array, size_t size)
  {

@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- *
- *
- *
+ * insertion_sort_list - list sort for insertion
+ * @list: is list to sort
+ * Return: Nothing
  */
  void insertion_sort_list(listint_t **list)
  {
