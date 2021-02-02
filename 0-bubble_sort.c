@@ -1,31 +1,30 @@
 #include "sort.h"
+
 /**
- * bubble_sort - sort list asending
- * @array: array for sort
- * @size: size of list
- * Return: Nothing
+ * bubble_sort - Bubble sort algorithm
+ *
+ * @array: The array to be sorted
+ * @size: Number of elements in @array
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i = 0;
-	int j = 1;
-	int tmp;
+	unsigned long int j, _switch = 1;
+	int tmp = 1;
 
-	if (array == NULL || size < 2)
-		return;
-	while (j)
+	while (_switch)
 	{
-		j = 0;
-		for (i = 1; i < size; i++)
+		_switch = 0;
+		for (j = 1; j < size; j++)
 		{
-			if (array[i] < array[i - 1])
+			if (array[j] < array[j - 1])
 			{
-				tmp = array[i];
-				array[i] = array[i - 1];
-				array[i - 1] = tmp;
-				j = 1;
+				tmp = array[j - 1];
+				array[j - 1] = array[j];
+				array[j] = tmp;
 				print_array(array, size);
+				_switch = 1;
 			}
 		}
+
 	}
 }
