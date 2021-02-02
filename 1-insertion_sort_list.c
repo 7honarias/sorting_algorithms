@@ -44,7 +44,7 @@ void insertion_sort_list(listint_t **list)
 			print_list(*list);
 		}
 		for (j = 0; j < i; j++)
-		if (b != NULL)
-		b = b->next;
+			if (b != NULL)
+				b = b->next;
 	}
 }
