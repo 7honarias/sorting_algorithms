@@ -6,27 +6,28 @@
  * @size: size of list
  * Return: Nothing
  */
- void selection_sort(int *array, size_t size)
- {
-	 size_t i = 0, j;
-	 int temp;
-	
-	 while (i < size)
-	 {
-		 j = i + 1;
-		 temp = array[i];
-		 while (j < size)
-		 {	
-			 if (temp > array[j])
-			 {
-				 temp = array[j];				 
-			 }
-			 j++;
-		 }
-		 array[j] = array[i];
-		 array[i] = temp;
-		 print_array(array, size);
-		 i++;
-		 
-	 }
- }
+void selection_sort(int *array, size_t size)
+{
+	size_t min, current = 0, plus; 
+	int temp;
+
+	while (current < size)
+	{
+		min = current;
+		for (plus = current; plus < size; plus++)
+		{
+			if (array[min] > array[plus])
+			{
+				min = plus;
+			}
+		}
+		if (array[current] != array[min])
+		{
+			temp = array[current];
+			array[current] = array[min];
+			array[min] = temp;
+			print_array(array, size);
+		}
+		current++;
+	}
+}
