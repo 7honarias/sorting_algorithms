@@ -41,11 +41,10 @@ void insertion_sort_list(listint_t **list)
 			if (a->prev == NULL)
 				*list = a;
 			i++;
-			print_list(*list);	
+			print_list(*list);
 		}
 		for (j = 0; j < i; j++)
 		if (b != NULL)
 		b = b->next;
 	}
-
 }
